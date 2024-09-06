@@ -35,7 +35,7 @@ public class DemoqaFormTests {
         $(".react-datepicker__week").find(".react-datepicker__day--025").click();
         $("#subjectsInput").setValue("Arts").pressEnter();
         $("[for=hobbies-checkbox-1]").click();
-        $("#uploadPicture").sendKeys(System.getProperty("user.dir") + "/src/images/avva.jpg");
+        $("#uploadPicture").sendKeys(System.getProperty("user.dir") + "/src/test/images/avva.jpg");
         $("#currentAddress").setValue("Vladimirskiy Central 12/3");
         $("#state").click();
         $("#react-select-3-option-0").click();
