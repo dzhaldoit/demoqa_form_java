@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
 
 public class DemoqaFormTests {
 
@@ -42,5 +42,17 @@ public class DemoqaFormTests {
         $("#city").click();
         $("#react-select-4-option-1").click();
         $("#submit").click();
+
+
+        $(".table-responsive").shouldHave(text("Mihail Zubenko"));
+        $(".table-responsive").shouldHave(text("mafia@sobaka.ru"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("8999665533"));
+        $(".table-responsive").shouldHave(text("25 June,1995"));
+        $(".table-responsive").shouldHave(text("Arts"));
+        $(".table-responsive").shouldHave(text("Sports"));
+        $(".table-responsive").shouldHave(text("avva.jpg"));
+        $(".table-responsive").shouldHave(text("Vladimirskiy Central 12/3"));
+        $(".table-responsive").shouldHave(text("NCR Gurgaon"));
     }
 }
