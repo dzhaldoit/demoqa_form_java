@@ -10,15 +10,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class DemoqaFormTests {
 
     @BeforeAll
-    static void beforeAll() {
+    static void setUP() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-    }
-
-    @AfterAll
-    static void cleanDB() {
-        WebDriverRunner.closeWindow();
     }
 
     @Test
