@@ -16,6 +16,11 @@ public class DemoqaFormTests {
         Configuration.pageLoadStrategy = "eager";
     }
 
+    @AfterAll
+    static void setDown() {
+        WebDriverRunner.closeWindow();
+    }
+
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
